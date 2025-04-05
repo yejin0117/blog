@@ -3,6 +3,21 @@ import styled from "styled-components";
 
 const steps = ["이력서 양식", "신상 정보", "경력", "수정", "완성"];
 
+function App() {
+
+  let [pName, pNameChange] = useState(['남자 코트 추천','안양 우동맛집','리액트 독학']);
+  let [thumbsUp, thumbsUpChange] = useState(0);
+  let posts
+/*
+  function titleChange(){
+    //글제목에 있던 1번째 데이터를 여자코트추천으로 바꿈 !!deep copy복사본 생성!! state가 array,object일때!
+    // var newArray = pName; <--이건 값 공유. 복사 아님
+    var newArray = [...pName]; //서로 독립적인 값을 가지는 복사
+    newArray[0] = '여자코트 추천';
+    pNameChange( newArray );
+    // pNameChange(['여자코트 추천', '안양 우동맛집집','리액트 독학']);
+  }*/
+
 export default function ResumeStepIndicator({ currentStep = 0 }) {
   return (
     <Container>
